@@ -1,12 +1,11 @@
 %-------------------------
 % Resume in Latex
 % Author : Niraj Kamal
-% Based off of: https://github.com/sb2nov/resume
+% Based on: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
-
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -38,7 +37,18 @@
 % \usepackage{charter}
 
 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
+% Adjust margins
+% \addtolength{\oddsidemargin}{-0.4in}
+% \addtolength{\evensidemargin}{-0.4in}
+% \addtolength{\textwidth}{1.19in}
+% \addtolength{\topmargin}{-.4in}
+% \addtolength{\textheight}{1.4in}
 
 % Load necessary packages
 \usepackage{fancyhdr}
@@ -47,25 +57,11 @@
 
 % Set up the page geometry
 \geometry{
-    top=1.4cm,
-    bottom=1.4cm,
-    left=1.3cm,
-    right=1.3cm
+    top=1.2cm,
+    bottom=1.2cm,
+    left=1.2cm,
+    right=1.2cm
 }
-
-% Set up fancyhdr
-\pagestyle{fancy}
-\fancyhf{} % Clear all headers and footers
-\fancyfoot[R]{\hfill \thepage/\pageref{LastPage}} % Right-align page number with hfill
-
-% Remove header and footer lines
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust distance between text and footer if needed
-% \setlength{\footskip}{30pt}
-
-
 
 \urlstyle{same}
 
@@ -75,7 +71,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\mdseries
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generated pdf is machine readable/ATS parsable
@@ -107,7 +103,7 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-3pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
@@ -140,31 +136,23 @@
 % \end{tabular*}
 
 \begin{center}
-    {\huge \textbf{ Niraj Kamal Karunanidhi} }\\[5pt]
-    \small
-    \href{mailto:nirajkkamal@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{nirajkkamal@gmail.com}} \hspace{1.5em}
-    \href{https://linkedin.com/in/niraj-kamal-k-31687212a/}{\raisebox{-0.2\height}\faLinkedin\ \underline{Linkedin: Niraj Kamal Karunanidhi}} \\
-    {\raisebox{-0.1\height}\faPhone\ 404 449 9773} \hspace{1.5em} 
-    % {\raisebox{-0.1\height}\faAddressBook\ Georgia Tech, Atlanta} \hspace{1.5em} 
-    \href{https://orcid.org/0000-0003-0568-3253}{\raisebox{-0.2\height}\faOrcid\ \underline{orcid.org/0000-0003-0568-3253}} \hspace{1.5em}
-    \href{https://github.com/nirajkamal}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/nirajkamal}}
+    {\huge \scshape Niraj Kamal Karunanidhi} \\ \vspace{1pt}
+    %123 Street Name, Town, State 12345 \\ \vspace{1pt}
+    % \small \raisebox{-0.1\height}\faPhone\ +91 7598184337 ~ 
+    \href{mailto:nirajkkamal@gmail.com}{\raisebox{-0.1\height}\faEnvelope\  \underline{nirajkkamal@gmail.com}} ~ \href{https://linkedin.com/in/niraj-kamal-k-31687212a/}{\raisebox{-0.1\height}\faLinkedin\ \underline{Linkedin: Niraj Kamal Karunanidhi}} ~ \href{Tel: 404-449-9773}{\raisebox{-0.1\height}\faPhone\ \underline{404 449 9773}} ~ \href{https://github.com/nirajkamal}{\raisebox{-0.1\height}\faGithub\ \underline{Github: nirajkamal}}
+    \vspace{-4pt}
+    % \vspace{-8pt}
+% \end{center}
+
+% \begin{center}
+    
 \end{center}
 
-
-
-%-----------SUMMARY-----------
-% \section{Summary}
-% \small{
-%     Accomplished Software Engineer with expertise in Autonomous Driving, ADAS, proprietary LLM development and Machine Learning. Proven track record in leading large-scale projects in both academia and the industry.
-% }
-
-\vspace{-20 pt}
-
-%-----------Research Interests-----------
+% %-----------Research Interests-----------
 % \section{Research Interests}
 %  \begin{itemize}[leftmargin=0.15in, label={}]
 %     \small{\item{
-%      \textbf{Computation}{: Perception Algorithms, Machine Learning, Computer Graphics, Computational Geometry, 3D Geometry Processing, Shape Modelling and Analysis, Stochastic Optimization, Origami and Programmable Materials } \\
+%      \textbf{Computation}{: Perception Algorithms, Machine Learning, Computer Graphics, Computational Geometry, 3D Geometry Processing, Shape Modelling and Analysis, Stochastic Optimization } \\
 %      % \textbf{Developer Tools}{: VS Code, AWS, Google Cloud Platform} \\
 %      \textbf{Robotics}{: Autonomous Vehicles, Auxetic Mechanisms and Meta-materials, Trajectory Prediction, Reinforcement Learning} \\
 %     }}
@@ -174,101 +162,107 @@
 
 
 
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Aug 2024 -- \underline{May 2026} (Expected)}
+      {MS in Computer Science (Specialization: Machine Learning and Robotics, CGPA - 4.0/4.0)}{Atlanta, USA}
+      \resumeItemListStart
+        \resumeItem{Courses: Computer Vision, CUDA. Student researcher at Shape Computation Lab.}
+        % \resumeItem{Computer Vision, GPU Architecture, Machine Learning.}
+      \resumeItemListEnd
+  
+    \resumeSubheading
+      {Indian Institute of Technology (IIT) Roorkee}{2016 -- 2021}
+      {Bachelor of Architecture (CGPA - 8.07/10.0)}{Roorkee, India}
+      \resumeItemListStart
+        % \resumeItem{Overall CGPA - 8.07/10.00, Graduated in \textbf{First Division}.}
+        \resumeItem{3-times \textbf{IIT Roorkee Heritage Awardee} 2018-20 (Outstanding academic \& extra-curricular excellence)}
+        \resumeItem{\textbf{Gold Medalist}, Inter IIT Tech Meet 2018. (Computer Vision - Campus Sustainability Challenge)}
+        % \resumeItem{\textbf{Gold Medal and Citation} - DesTech 2017-smart cities research - Annual National Association of Students of Architecture Convention 2017.}
+        \resumeItem{\textbf{DAAD Research Scholar} - DAAD STIBET-III Scholarship 2020-21, for research on programmable materials.}
+        % \resumeItem{Professional Training Exchange Semester at TU Dresden, Germany.}
+      \resumeItemListEnd
+
+      \resumeSubHeadingListEnd
+
+
 
 %-----------EXPERIENCE-----------
-\section{Professional Experience}
+\section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-        {Mercedes-Benz Research and Development}{Dec 2022 -- Jul 2024}
-        {Software Development Engineer - Autonomous Driving (Simulation)}{Bangalore, India}
-        \resumeItemListStart
-            \resumeItem{\textbf{Autonomous Driving:} Developed ADAS and autonomous driving features, and reinforcement learning models, signal encoding, and simulation frameworks.}
-            \resumeItem{Designed a stochastic and adversarial scenario generation framework to simulate diverse road conditions and emergencies, advancing autonomous driving and safety system development.}
-            \resumeItem{\textbf{LLM Model Development:} Led proprietary in-house LLM development, executing \textit{\textbf{parallel distributed fine-tuning}} on base models using PyTorch across 8 Nvidia A100 GPUs.}
-            \resumeItem{Engineered a \textit{funneled dataset generation framework} for LLMs, utilizing advanced data analysis and machine learning for custom code languages.}
-            \resumeItem{\textbf{Innovation(Patents):} Spearheaded initiatives leading to \textit{\textbf{5 potential patents}} in AD/ADAS technology. Recognized with the \textit{\textbf{Bronze-Star Award}} for exceptional innovation. Volunteered as the Department's Innovation Ambassador.}
-        \resumeItemListEnd
-
+      {Mercedes-Benz Research and Development, India}{Dec 2022 -- Jul 2024}
+      {Software Development Engineer - Autonomous Driving (\textbf{Bronze-Star Awardee})}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Developed ADAS, \textbf{autonomous driving} features, adversarial models in RL and signal encoding in Python.}
+        \resumeItem{Built stochastic and scenario generation framework and optimizers for Software in Loop (SIL) development in Python and Drivesim. Keynote Speaker - delivered workshops and lectures on Simulation generation.}
+        \resumeItem{\textbf{LLM Model Development:} Led proprietary in-house LLM development for code generation, executing \textit{\textbf{parallel distributed training}} on base models using PyTorch across 8 Nvidia A100 GPUs. Reduced Simulation design, and scenario scripting time from \textit{3 days to 2.5 hours}.}
+        \resumeItem{Developed a funneled dataset creation framework on python to convert internal codebase into chain-of-thought dataset for LLM traning.}
+        \resumeItem{Innovation and Learning POC - Initiated and Built implementations and workflows for \textit{5 patents} in AD/ADAS.}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Snaptrude}{May 2022 - Oct 2022}
       {Product Manager/ Data Scientist}{Bangalore, India}
       \resumeItemListStart
-        \resumeItem{Managed and Owned \textit{\textbf{Building Energy Prediction features}} and related research as a Product Manager.}
-        \resumeItem{Built data integrations and pipelines for CRM.}
-        \resumeItem{Conducted weekly EDA for new features and built a Logistic Regression classifier on 3D vector data of Buildings.}
+        \resumeItem{Lead and Owned \textit{\textbf{Building Energy Prediction feature}}, related R\&D on automatic energy calculation, and Data Analytics from production to feature release.}
+        % \resumeItem{Conducted weekly EDA for new features and built a Logistic Regression classifier on 3D vector data of Buildings.}
+        
     \resumeItemListEnd
 
     \resumeSubheading
       {UniAcco}{Jul 2021 - May 2022}
-      {Product Management and Design Direction}{Mumbai, India}
+      {Product Designer/ Product Analyst}{Mumbai, India}
       \resumeItemListStart
-        \resumeItem{\textit{\textbf{Lead UX research, design direction and product development}} of 3 products - UniAcco, UniCreds and UniScholars.}
-        \resumeItem{Scaled to \textit{\textbf{1 Million MAU from 1000 MAU}} (Monthly Active Users) in 10 months. Spearheaded Product Analytics using Amplitude, built dashboards deducing the KPIs, funnels, and metrics for product growth, retention, and churn probabilities for different scenarios.}
-        \resumeItem{Redesigned, Managed and Released the three products. \textit{Reduced churn by 40\%} and \textit{increased conversion by 70\%}. }
+        % \resumeItem{Built the \underline{product analytics} framework using Freshpaint and Amplitude.}
+        % \resumeItem{Conducted product and competitor analysis, defined events, built dashboards deducing the KPIs, funnels, and metrics for product growth, retention, and churn probabilities for different scenarios. Scaled to \underline{1M MAU from 1000 MAU} in 10 months. \underline{Executed UX research and product development} of 3 products - UniAcco, UniCreds and UniScholars.}
+        % \resumeItem{Redesigned, Managed and Released the three products. \underline{Reduced churn by 20\%} and increased conversion by 40\%. }
+        \resumeItem{\textit{\textbf{Lead UX research, design direction and product development}} of 3 products - UniAcco, UniCreds and UniScholars. Scaled to \textit{\textbf{1 Million MAU from 1000 MAU}} (Monthly Active Users) in 10 months.}
     \resumeItemListEnd
 
     
     
-  \resumeSubHeadingListEnd
+  % \resumeSubHeadingListEnd
 % \vspace{-16pt}
 
 
 
 
 
-
-
 %-----------EDUCATION-----------
-\section{Education and Academic Positions}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Georgia Institute of Technology}{Aug 2024 -- May 2026}
-      {MS in Computer Science}{Atlanta, USA}
-      \resumeItemListStart
-        \resumeItem{Specialization in Computational Perception and Robotics/ Computer Graphics}
-        \resumeItem{Computer Vision, GPU Architecture, Machine Learning.}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Indian Institute of Technology (IIT) Roorkee}{Jul 2016 -- Jul 2021}
-      {Undergraduate Degree (Architecture, CGPA - 8.07/10.00)}{Roorkee, India}
-      \resumeItemListStart
-        \resumeItem{3-times \textbf{IIT Roorkee Heritage Awardee} - (awarded to top 1 candidate in the batch per year.)} \resumeItem{\textbf{Gold Medalist}, Inter IIT Tech Meet 2018. (Campus Sustainability Challenge - Computer Vision)}
-        \resumeItem{\textbf{Gold Medal and Citation} - DesTech 2017-smart cities - Annual NASA India Architecture Convention 2017.}
-        \resumeItem{\textbf{DAAD Research Scholar} - DAAD STIBET-III, TU Dresden, Germany 2020-21.}
-        \resumeItem{Professional Training Exchange Semester at TU Dresden, Germany.}
-      \resumeItemListEnd
-  
+% \section{Education and Academic Positions}
+%   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {WissensArchitektur Laboratory, TU Dresden, Germany}{Jan 2020 -- Dec 2020}
+      {Wissensarchitektur Laboratory, TU Dresden, Germany}{Jan 2020 -- Dec 2020}
       {Research Scholar - Programmable and Robotic Materials}{Dresden, Germany}
       \resumeItemListStart
-        \resumeItem{Principal Investigator in Project ADAM (Adaptive and Programmable Architecture and Material Structures). Authored 5 research article manuscripts on the subject.}
-        \resumeItem{\textit{\textbf{First-Author Publication} - "Programmable Multi-Layered Auxetic Mechanisms" in Journal of Materials Science.}}
-        \resumeItem{Designed a mapping algorithm in Grasshopper, using OSM data to plan the cycle routes for the city of Chemnitz.}
-        % \resumeItem{Lead the development of adaptive reuse of the largest Soviet wind tunnel in Europe into a student activity space in Kyiv, along with execution drawings.}
+        \resumeItem{Principal Investigator in Project ADAM (Adaptive and Programmable Architecture and Material Structures).}
+        \resumeItem{\textit{\textbf{First-Author Publication} - "Programmable Multi-Layered Auxetic Mechanisms" in Journal of Materials Science".}}
     \resumeItemListEnd
 
     \resumeSubheading
       {Center for Scientific Research, Auroville}{May 2019 -- Jul 2020}
-      {Researcher - Computational Energy Optimization and Simulation - Humanscapes}{Auroville, Pondicherry}
+      {Researcher - Computational Energy Optimization and Simulation}{Auroville, Pondicherry}
       \resumeItemListStart
-        \resumeItem{Accolade: \textit{Got the Green Solutions Award at the \textbf{UN COP26 Climate Conference} in Glasgow.}}
-        \resumeItem{\underline{Co-Author} of "Humanscapes Habitat - Integrated Design For Sustainable Living"}
-        \resumeItem{Developed and deployed 20 custom sensor modules using Node-MCU and logged building performance data.}
-        \resumeItem{Built a custom analysis algorithm in Python and pandas to analyze sensor data.}
-        \resumeItem{Proposed Strategies that reduced the energy cost by 35 \% and water usage by 40 \%.}
+        % \resumeItem{Developed and deployed 20 custom sensor modules using Arduino Node-MCU and logged building performance data of the Humanscapes building project.}
+        % \resumeItem{Built a custom analysis algorithm in Python and pandas to analyze sensor data. \underline{Co-Author} of "Humanscapes Habitat - Integrated Design For Sustainable Living"}
+        % \resumeItem{Proposed Strategies that reduced the energy cost by 20 \% and water usage by 40 \%. \underline{The project got the Green Solutions Award at the UN COP26 Conference.}}
+        \resumeItem{\textbf{Honors}: \textit{Got the Green Solutions Award at the \textbf{UN COP26 Climate Conference} in Glasgow.}}
+        \resumeItem{\textbf{Co-Author} of "Humanscapes Habitat - Integrated Design For Sustainable Living". Built optimizers for energy use.}
     \resumeItemListEnd
 
     \resumeSubheading
-      {Net-Zero Energy Design (NetZED) Laboratory, IITR}{Jun 2018 - Dec 2018}
-      {Research Assistant - Computer Vision and Robotics}{IIT Roorkee, India}
+      {Net Zero Energy Design (NetZED) Laboratory, IITR}{Jun 2018 - Jan 2021}
+      {Student Researcher}{IIT Roorkee, India}
       \resumeItemListStart
-        \resumeItem{Developed Computer Vision algorithms for CCTV cameras for occupancy, activity detection, and localization. Built IoT modules to regulate lighting and cooling based on real-time occupancy.}
-        \resumeItem{Developed algorithms in C++ for actuating robotic louvers in buildings that adapts to local GPS coordinates, orientation and sun-path.}
-        \resumeItem{The louvers increased natural diffused light penetration in the buildings by 30\% while reducing the thermal load.}
+        % \resumeItem{Developed Computer Vision algorithms for CCTV cameras for occupancy, activity detection, and localization. Built IoT modules to regulate lighting and cooling based on real-time occupancy.}
+        % \resumeItem{Developed a robust algorithm in C++ for actuating mechanical louvers in buildings that adapts to local coordinates and sun path.}
+        % \resumeItem{Built a louver prototype to validate the algorithm and controlled it via wifi. The louvers increased natural diffused light penetration in the buildings by 35 percent while reducing the thermal load during summers through shading.}
+        \resumeItem{Developed Computer Vision algorithms for occupancy, activity detecition, and localization using Yolo V2.}
     \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -292,19 +286,6 @@
 %     %\resumeSubHeadingListEnd
 
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python(Numpy, Scipy, Pandas, Pytorch), C++(CUDA), NVIDIA HSDL, OpenScenario, HTML/CSS, JavaScript, SQL} \\
-     % \textbf{Developer Tools}{: VS Code, AWS, Google Cloud Platform} \\
-     \textbf{Technologies/Frameworks}{: Linux, NVIDIA Drivesim/ Omniverse, Git, AWS - HPC Cloud Computing.} \\
-     \textbf{Robotics}{: RL, RCNN, Perception and Intelligent algorithms, Software in Loop(SIL), Arduino, Trajectory Prediction.} \\
-     \textbf{Simulation and 3D Geometry}{: Rhino, Grasshopper, AutoCAD, SUMO, Carla, Sketchup, Unity.}
-    }}
- \end{itemize}
- \vspace{-17pt}
-
 
 %-----------PROJECTS-----------
 \section{Publications}
@@ -312,39 +293,54 @@
     \resumeSubHeadingListStart
         \item
           \resumeItemListStart
-            \resumeItem{\href{https://doi.org/10.1007/s10853-023-08751-6}{\textbf{Karunanidhi, N.K.}, Sobczyk, M., Wiesenhütter, S. et al. \underline{Programmable multi-layered auxetic mechanisms}. Springer Journal of Materials Science 58, 13253–13268 (2023). https://doi.org/10.1007/s10853-023-08751-6}}
-            \resumeItem{\href{https://www.researchgate.net/publication/372648515_Humanscapes_Habitat_-_Integrated_design_for_sustainable_living_Design_for_adaptive_comfort_for_reduced_operational_energy_consumption}{Ayer, S., Prasad, R., \textbf{Karunanidhi, N.K.} (2022). Humanscapes Habitat - Integrated design for sustainable living Design for adaptive comfort for reduced operational energy consumption. PLEA 2022, Santiago. https://www.researchgate.net/publication/372648515} }
+            \resumeItem{\href{https://doi.org/10.1007/s10853-023-08751-6}{(\textbf{\textit{Journal - Robotics}}) \textbf{Karunanidhi, N.K.}, Sobczyk, M., Wiesenhütter, S. et al. (2023). \underline{Programmable multi-layered auxetic mechanisms. Journal of Materials Science - Springer} 58, 13253–13268.}}
             
-            \resumeItem{\href{http://dx.doi.org/10.13140/RG.2.2.19628.64640}{\textbf{Karunanidhi, N.K.}, Pandit, V., Angural, A. (2017) Destech Start to Smart City. 2017 Annual Conference - National Association of Students of Architecture India. http://dx.doi.org/10.13140/RG.2.2.19628.64640}}
+            \resumeItem{\href{https://www.researchgate.net/publication/372648515_Humanscapes_Habitat_-_Integrated_design_for_sustainable_living_Design_for_adaptive_comfort_for_reduced_operational_energy_consumption}{(\textbf{\textit{Conference - Computational Optimization}}) Ayer, S., Prasad, R., \textbf{Karunanidhi, N.K.} (2022). Humanscapes Habitat - Integrated design for sustainable living Design for adaptive comfort for reduced operational energy consumption. PLEA 2022, Santiago.} }
+            % https://www.researchgate.net/publication/372648515
             
-            \resumeItem{\href{http://dx.doi.org/10.13140/RG.2.2.15920.53768/1}{\textbf{Karunanidhi, N.K.} (2020) Professional Training (Thesis) Report 2020. Indian Institute of Technology Roorkee. http://dx.doi.org/10.13140/RG.2.2.15920.53768/1}}
+            % \resumeItem{\href{http://dx.doi.org/10.13140/RG.2.2.19628.64640}{\textbf{Karunanidhi, N.K.}, Pandit, V., Angural, A. (2017) Destech Start to Smart City. 2017 Annual Conference - National Association of Students of Architecture India. http://dx.doi.org/10.13140/RG.2.2.19628.64640}}
+            
+            % \resumeItem{\href{http://dx.doi.org/10.13140/RG.2.2.15920.53768/1}{\textbf{Karunanidhi, N.K.} (2020) Professional Training (Thesis) Report 2020. Indian Institute of Technology Roorkee. http://dx.doi.org/10.13140/RG.2.2.15920.53768/1}}
             
           \resumeItemListEnd
           
     \resumeSubHeadingListEnd
 \vspace{-8 pt}
 
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, CUDA, Nvidia HSDL, OpenScenario 2.0, HTML/CSS, JavaScript, SQL.} \\
+     % \textbf{Developer Tools}{: VS Code, AWS, Google Cloud Platform} \\
+     \textbf{Technologies}{: Linux, NVIDIA Drivesim/ Omniverse, Git, AWS - HPC Cloud Computing, Simulations.} \\
+     \textbf{Robotics}{: Computer Vision, RL, RCNN, Perception and Decision-making algorithms, Software in Loop (SIL).} \\
+    }}
+ \end{itemize}
+ \vspace{-17pt}
+
 %-----------AWARDS--HONORS-----------
-\section{Awards and Honors}
+% \section{Awards and Honors}
     
-    \resumeSubHeadingListStart
-    \item
-      \resumeItemListStart
-         \resumeItem{\textbf{Bronze Star Award} - for innovations and patents. Issued by \underline{Mercedes-Benz Research and Development India.}}
-         \resumeItem{\textbf{Naveen and Anu Jain Excellence Award (2020)} - for outstanding CCE (curricular, co-curricular and extra-curricular achievements). Issued to top 1\% every year by IIT Roorkee.}
-         \resumeItem{\textbf{Sumeet Agarwal Excellence Award (2019)} -  Issued to top 1\% every year by IIT Roorkee.}
-         \resumeItem{\textbf{Green Solutions Award} (among many other awards) - for Humanscapes Project. \newline Issued at the \textbf{COP26 United Nations (UN) Climate Conference} in Glasgow, UK.}
-         \resumeItem{\textbf{Gold Medal - Inter IIT Tech Meet (2018)}. Issued by IIT Bombay.}
-         \resumeItem{\textbf{Seema and Ajit Gupta Excellence Award  (2018)} - Issued to top 1\% every year by IIT Roorkee}
-         \resumeItem{\textbf{DesTech Gold Medal} and Honorary Citation - Destech Smart City Poster (2017). Issued by Co-Plug, UK, at the Annual National Association of Students of Architecture Conference, 2017}
-      \resumeItemListEnd
-    \resumeSubHeadingListEnd
+%     \resumeSubHeadingListStart
+%         \item
+%           \resumeItemListStart
+%              \resumeItem{\textbf{Bronze star Award} - for innovative and pioneering spirit. Issued by Mercedes-Benz Research and Development India.}
+%             \resumeItem{\textbf{Naveen and Anu Jain Excellence Award (2020)} - for extraordinary curricular, co-curricular and extra-curricular achievements. Issued by IITR Heritage Foundation, IIT Roorkee.}
+%             \resumeItem{\textbf{Sumeet Agarwal Annual Excellence Award (2019)} - for extraordinary curricular, co-curricular and extra-curricular achievements. Issued by IITR Heritage Foundation, IIT Roorkee.}
+%             \resumeItem{\textbf{Green Solutions Award} for India (among many other awards) - for Humanscapes. Issued by Construction 21 at the \textbf{COP26 United Nations (UN) Climate Conference} in Glasgow, UK.}
+%             \resumeItem{\textbf{Gold Medal - Best Project on Campus Sustainability (2018)}, Inter IIT Tech Meet 2018. Issued by IIT Bombay.}
+%             \resumeItem{\textbf{Seema and Ajit Gupta Annual Excellence Award (2018)} - for extraordinary curricular, co-curricular and extra-curricular achievements. Issued by IITR Heritage Foundation, IIT Roorkee.}
+%             \resumeItem{\textbf{DesTech Gold Medal} and Honorary Citation - Destech Smart City Poster (2017). Issued by Co-Plug, UK, at the Annual National Association of Students of Architecture Conference, 2017}
+            
+%           \resumeItemListEnd
+          
+%     \resumeSubHeadingListEnd
 
+%  \vspace{-8pt}
+% %
 
- \vspace{-8pt}
-%
-
-%-----------SCHOLARSHIPS-----------
+% %-----------SCHOLARSHIPS-----------
 % \section{Scholarships}
     
 %     \resumeSubHeadingListStart
@@ -359,31 +355,42 @@
 %  \vspace{-8pt}
 
 
-%-----------MEMBERSHIPS-----------
-\section{Leadership / Extracurricular}
+% %-----------MEMBERSHIPS-----------
+% \section{Leadership / Extracurricular}
     
-    \resumeSubHeadingListStart
-        \item
-          \resumeItemListStart
-            \resumeItem{\textbf{Keynote Speaker}, Paradigms of Autonomous Driving, Cognizance 2024 Guest Lecture Series - IIT Roorkee}
-            \resumeItem{\textbf{Lecturer (Tech Talk)}, Stochastic and Variational Simulations, AD Academy Lecture Series, Mercedes-Benz R\&D}
-            \resumeItem{Lead \textbf{Swimmer}, IIT Roorkee Aquatics Team. Won several medals in Annual Aquatics meets from 2016-2018}
-            \resumeItem{\textbf{Student Mentor} and Core Team Member - Artificial Intelligence and Electronics Society (ArIES), IIT Roorkee.}
-            \resumeItem{\textbf{Product Manager, Student Mentor}, Design Studio - The Design Society of IIT Roorkee.}
-            \resumeItem{Co-Convenor - Smart India Hackathon 2019 (Asia's largest Hackathon) at IIT Roorkee}
-            \resumeItem{\textbf{Co-founder} of Aero Club, (ArIES) IITR. Finalist in UAV design competition by Boeing, Inter IIT Tech Meet 2016.}
-            \resumeItem{IIT Roorkee \textbf{Contingent Member, Gold Medalist} - Inter IIT Tech meet 2016, 2018}
-            \resumeItem{\textbf{Innovation POC} (for patents), \textbf{Learning \& Development POC} - Mercedes Benz R\&D India.}
+%     \resumeSubHeadingListStart
+%         \item
+%           \resumeItemListStart
+%             \resumeItem{\textbf{Keynote Speaker}, Paradigms of Autonomous Driving, Cognizance 2024 Guest Lecture Series - IIT Roorkee}
+%             \resumeItem{\textbf{Lecturer (Tech Talk)}, Stochastic and Variational Simulations, AD Academy Lecture Series, Mercedes-Benz R\&D}
+%             \resumeItem{Lead \textbf{Swimmer}, IITR Aquatics Team. Won several medals in Annual Aquatics meets from 2016-2018}
+%             \resumeItem{\textbf{Student Mentor} and Core Team Member - Artificial Intelligence and Electronics Society (ArIES), IITR.}
+%             \resumeItem{\textbf{Product Manager, Student Mentor}, Design Studio - The Design Society of IITR.}
+%             \resumeItem{Co-Convenor - Smart India Hackathon 2019 (Asia's largest Hackathon) at IITR}
+%             \resumeItem{\textbf{Co-founder} of Aero Club, (ArIES) IITR. Finalist in UAV design competition by Boeing, Inter IIT Tech Meet 2016.}
+%             \resumeItem{IIT Roorkee \textbf{Contingent Member, Gold Medalist} - Inter IIT Tech meet 2016, 2018}
+%             \resumeItem{\textbf{Innovation POC} (for patents), \textbf{Learning \& Development POC} - Mercedes Benz R\&D India.}
             
-          \resumeItemListEnd
+%           \resumeItemListEnd
           
-    \resumeSubHeadingListEnd
+%     \resumeSubHeadingListEnd
 
- \vspace{-8pt}
+%  \vspace{-8pt}
+
+% %-----------PROGRAMMING SKILLS-----------
+% \section{Technical Skills}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Languages}{: Python, C++, NVIDIA HSDL, OpenScenario 2.0, HTML/CSS, JavaScript, SQL} \\
+%      % \textbf{Developer Tools}{: VS Code, AWS, Google Cloud Platform} \\
+%      \textbf{Technologies/Frameworks}{: Linux, NVIDIA Drivesim/ Omniverse, Git, AWS - HPC Cloud Computing.} \\
+%      \textbf{Robotics}{: RL, RCNN, Perception and Decision-making algorithms, Software in Loop (SIL), Auxetics, Arduino.} \\
+%     }}
+%  \end{itemize}
+%  \vspace{-17pt}
 
 
-
-% %-----------PRESS COVERAGE-----------
+%-----------PRESS COVERAGE-----------
 % \section{Selected Press Coverage}
 %  \begin{itemize}[leftmargin=0.15in, label={}]
 %     \small{\item{
